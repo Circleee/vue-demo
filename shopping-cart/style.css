@@ -1,0 +1,74 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: '微软雅黑';
+}
+#shoppingcart{
+	width: 450px;
+	margin: 140px auto 0px;
+}
+#shoppingcart h2{
+	line-height: 140px;
+	text-align: center;
+}
+#shoppingcart .goodslist .item{
+	height: 75px;
+    margin: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0px
+}
+#shoppingcart .goodslist .item .img{
+	width: 140px;
+	height: 75px;
+	background: #cf0;
+	float: left;
+}
+#shoppingcart .goodslist .item .img h3{
+	line-height: 75px;
+	text-align: center;
+}
+#shoppingcart .goodslist .item .desc{
+	margin: 0px 80px 0px 180px;
+}
+#shoppingcart .goodslist .item .desc p{
+	line-height: 37.5px
+}
+#shoppingcart .goodslist .item .desc p span{
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+#shoppingcart .goodslist .item .desc p .off{
+	background: #ff9b00;
+	color: #fff;
+	border-radius: 4px;
+}
+#shoppingcart .goodslist .item .desc p i{
+	display: inline-block;
+	padding: 0px 15px;
+}
+#shoppingcart .goodslist .item .remove{
+	float: right;
+	line-height: 75px;
+}
+#shoppingcart .goodslist .item .remove h1{
+	font-weight: normal;
+	cursor: pointer;
+	font-size: 20px;
+}
+#shoppingcart .infor label{
+	display: inline-block;
+	width: 90px
+}
+#shoppingcart .infor input{
+	margin-left: 30px;
+}
+#shoppingcart .menu{
+	margin: 20px 0px 0px;
+	padding: 20px 0px;
+	border: 1px solid #ddd;
+	border-left: none;
+	border-right: none;
+	line-height: 30px
+}

@@ -1,1 +1,96 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>shopping-cart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../vue/vue.min.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+</head>
+<body>
+	<div id="shoppingcart">
+		<div class="goodslist">
+			<template v-if='data.length==0'>
+				<h2>购物车为空</h2>
+			</template>
+			<template v-else>
+				<div class="item" v-for="item in data">
+					<div class="img">
+						<h3>{{item.name}}</h3>
+					</div>
+					<div class="remove">
+						<h1 @click='remove($index)'>移除</h1>
+					</div>
+					<div class="desc">
+						<p>单价:{{item.price}}</p>
+						<p>
+							<span :class="{off:item.count==0}"  @click="sub($index)">-</span>
+							{{item.count}}
+							<span :class="{off:item.count==9}"  @click="add($index)">+</span>
+						</p>
+					</div>
+				</div>
+			</template>
+			<div class="infor">
+				<label>收 件 人:</label>
+				<input v-model='membername' type="text" />
+				<br/>
+				<br/>
+				<label>收货地址:</label>
+				<input v-model='loc' type="text" />
+			</div>
+			<div class="menu">
+				<h4>清单</h4>
+				<p>商品总价:{{total}}</p>
+				<p>会员姓名:{{membername}}</p>
+				<p>收货地址:{{loc}}</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var shoppingcart = new Vue({
+		el:'#shoppingcart',
+		data:{
+			data:data,
+			loc:"",
+			membername:''
+		},
+		methods:{
+			// 商品数量增加方法
+			add:function (index) {
+				if (this.data[index].count>=9) {
+					return false
+				}
+				else{
+					this.data[index].count++
+				}
+				
+			},
+			// 商品数量减少方法
+			sub:function (index) {
+				if (this.data[index].count<=0) {
+					return false
+				}
+				else{
+					this.data[index].count--
+				}
+			},
+			// 移除商品方法
+			remove:function(index){
+				this.data.splice(index,1)
+			}
+		},
+		computed:{
+			//计算总价格
+			total:function(){
+				var total = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					total += this.data[i].price*this.data[i].count
+				}
+				return total
+			}
+		}
+	})
+		
+	</script></body>
+</html>
