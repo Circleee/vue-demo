@@ -20,7 +20,8 @@
 #shoppingcart .goodslist .item .img{
 	width: 140px;
 	height: 75px;
-	background: #cf0;
+	background: #3699FF;
+	border-radius: 4px;
 	float: left;
 }
 #shoppingcart .goodslist .item .img h3{
