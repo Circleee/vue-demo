@@ -5,4 +5,4 @@
 		v-for="name in names|orderBy val"
 		根据val的数值进行排序
 		v-for="name in names|orderBy val -1"
-		反向排序
+		排序切换
