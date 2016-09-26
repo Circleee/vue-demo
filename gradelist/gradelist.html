@@ -13,9 +13,9 @@
 			<input type="text" v-model=name />
 		</div>
 		<div class="head">
-			<div class="li">姓名<span @click="rank('name')">排序</span></div>
-			<div class="li">成绩<span @click="rank('grade')">排序</span></div>
-			<div class="li">光环<span @click="rank('bug')">排序</span></div>
+			<div class="li"><span  @click="rank('name')">姓名</span></div>
+			<div class="li"><span  @click="rank('grade')">成绩</span></div>
+			<div class="li"><span  @click="rank('bug')">光环值</span></div>
 		</div>
 		<div class="main" v-for="item in data|filterBy name in |orderBy val  order">
 			<div class="li">{{item.name}}</div>

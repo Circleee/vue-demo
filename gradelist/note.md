@@ -6,3 +6,5 @@
 		根据val的数值进行排序
 		v-for="name in names|orderBy val -1"
 		排序切换。
+### tip
+	点击名称可以切换
