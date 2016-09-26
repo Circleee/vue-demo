@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../vue/vue.min.js"></script>
+</head>
+<body>
+	<div id="grade">
+		<div class="search">
+			<label>搜索</label>
+			<input type="text" v-model=name />
+		</div>
+		<div class="head">
+			<button @click="order = order * -1">opopo</button>
+			<div class="li">姓名<span @click="rank('name')">排序</span></div>
+			<div class="li">成绩<span @click="rank('grade')">排序</span></div>
+			<div class="li">光环<span @click="rank('bug')">排序</span></div>
+		</div>
+		<div class="main" v-for="item in data|filterBy name in |orderBy val  order">
+			<div class="li">{{item.name}}</div>
+			<div class="li">{{item.grade}}</div>
+			<div class="li">{{item.bug}}</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var gr = new Vue({
+			el:'#grade',
+			methods:{
+				rank:function ($val) {
+					if (this.val==$val){
+						this.order = this.order*-1
+					}else{
+						this.val = $val
+					}
+				}
+			},
+			data:{
+				val:'name',
+				order:1,
+				data:[
+					{
+						name:'鸣人',
+						grade:45,
+						bug:78
+					},
+					{
+						name:'佐助',
+						grade:95,
+						bug:70
+					},
+					{
+						name:'春野樱',
+						grade:85,
+						bug:98
+					},
+					{
+						name:'我爱罗',
+						grade:98,
+						bug:89
+					},
+					{
+						name:'鬼鲛',
+						grade:98,
+						bug:89
+					},
+					{
+						name:'宇智波鼬',
+						grade:98,
+						bug:89
+					}
+				]
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: '微软雅黑'
+}
+#grade{
+	width: 700px;
+	margin: 140px auto 0px;
+}
+#grade .li{
+	float: left;
+	width: 160px;
+	text-align: center;
+}
+#grade .li span{
+	display: inline-block;
+	padding-left: 40px;
+	cursor: pointer;
+	color: #c0f;
+}
+#grade .head,#grade .main{
+	height: 40px;
+	line-height: 40px;
+}
