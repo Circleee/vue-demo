@@ -22,7 +22,7 @@
 						<h1 @click='remove($index)'>移除</h1>
 					</div>
 					<div class="desc">
-						<p>单价:{{item.price}}</p>
+						<p>单价:{{item.price|currency '¥' 1}}</p>
 						<p>
 							<span :class="{off:item.count==0}"  @click="sub($index)">-</span>
 							{{item.count}}
@@ -41,7 +41,7 @@
 			</div>
 			<div class="menu">
 				<h4>清单</h4>
-				<p>商品总价:{{total}}</p>
+				<p>商品总价:{{total|currency '¥' 1}}</p>
 				<p>会员姓名:{{membername}}</p>
 				<p>收货地址:{{loc}}</p>
 			</div>
