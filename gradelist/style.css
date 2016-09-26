@@ -12,6 +12,13 @@
 	width: 160px;
 	text-align: center;
 }
+#grade .search{
+	text-align: center;
+    line-height: 60px;
+    background: #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 #grade .li span{
 	display: inline-block;
 	padding-left: 40px;
@@ -21,4 +28,5 @@
 #grade .head,#grade .main{
 	height: 40px;
 	line-height: 40px;
+	background: #ccc;
 }
