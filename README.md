@@ -1,5 +1,4 @@
 # Vue-demo
-Vue-demo
 ------
 写一些简单的Vue-demo来学习vue.js
 ###demo1：购物车 shopping-cart
