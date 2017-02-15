@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../vue/animate.min.css">
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background: #cdcdcd;
+	}
+	#app{
+		width: 640px;
+		margin: 0px auto;
+	}
+	#app h2{
+		text-align: center;
+	}
+	#app .div{
+		width: 240px;
+		height: 200px;
+		margin: 0px auto;
+		background: red
+	}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h2 @click='toggle'>cccc</h2>
+		<div class="div animated" v-show= 'divshow' transition = 'bounce'></div>
+	</div>
+	<script type="text/javascript" src="../vue/vue.min.js"></script>
+	<script type="text/javascript">
+		var app =new Vue({
+			el:"#app",
+			data:{
+				divshow:true
+			},
+			methods:{
+				toggle:function () {
+					this.divshow =!this.divshow
+				}
+			},
+			transitions:{
+					bounce:{
+						enterClass:'zoomInLeft',
+						leaveClass:'zoomOut'
+					}
+			}
+		})
+	</script>
+</body>
+</html>
